@@ -1,0 +1,34 @@
+{
+  "technologies": [
+    {
+      "id": 1,
+      "name": "REACT",
+      "author": "Facebook",
+      "repository_url": "https://github.com/facebook/react"
+    },
+    {
+      "id": 2,
+      "name": "ANGULAR",
+      "author": "Google",
+      "repository_url": "https://github.com/angular"
+    },
+    {
+      "id": 3,
+      "name": "VUE",
+      "author": "Evan You",
+      "repository_url": "https://github.com/vuejs/vue"
+    },
+    {
+      "id": 4,
+      "name": "REDUX",
+      "author": "Facebook",
+      "repository_url": "https://github.com/reduxjs/redux"
+    },
+    {
+      "id": 5,
+      "name": "Angular JS",
+      "author": "Google",
+      "repository_url": "https://github.com/angular/angular.js/"
+    }
+  ]
+}

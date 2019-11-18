@@ -1,0 +1,70 @@
+/*GET BY ID*/
+query getSingleTechnology($technologyID: Int!) {
+	technology(id: $technologyID) {
+    id
+    name
+    author
+    repository_url
+  }
+}
+
+{
+  "technologyID": 1
+}
+
+/*GET BY AUTHOR*/
+query getTechnologies($technologyAuthor: String!) {
+	technologies(author: $technologyAuthor) {
+    id
+    name
+    author 
+  }
+}
+
+{
+  "technologyAuthor": "Google"
+}
+
+/*GET WITH FRAGMENTS*/
+query getTechnologiesWithFragments($technologyID1: Int!, $technologyID2: Int!) {
+	technology1: technology(id: $technologyID1) {
+    ...technolgyFields
+  }
+  technology2: technology(id: $technologyID2) {
+    ...technolgyFields
+  }
+}
+fragment technolgyFields on Technology {
+  name
+  id
+  author
+  repository_url
+}
+
+{
+  "technologyID1": 4,
+  "technologyID2": 1
+
+}
+
+/*MUTACIONES*/
+
+
+mutation updateTechnologyAuthor($id: Int!, $author: String!) {
+  updateTechnologyAuthor(id: $id, author: $author) {
+    ...technolgyFields
+  }
+}
+
+
+fragment technolgyFields on Technology {
+  name
+  id
+  author 
+  repository_url
+}
+{
+  "id": 1,
+  "author": "Diebian"
+
+}
